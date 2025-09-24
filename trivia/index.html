@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function selectAnswerMaths(id, value) {
+                if(value.innerText == 1300) {
+                    const button = document.getElementById(id).style.backgroundColor = "green"
+                    alert("Correct!")
+                }else {
+                    const button = document.getElementById(id).style.backgroundColor = "red"
+                    alert("Incorrect")
+                }
+            }
+
+            function selectAnswerItalian() {
+                if(document.getElementById("italian-1").value == "William Shakespeare") {
+                    const text = document.getElementById("italian-1").style.backgroundColor = "green"
+                    alert("Correct!")
+                }else {
+                    const text = document.getElementById("italian-1").style.backgroundColor = "red"
+                    alert("Incorrect")
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Result of 1 + 8 + 184 * 7 + 2 + 1 = </h3>
+                <form>
+                    <button type="button" id="maths-1" onclick="selectAnswerMaths(this.id, this)" class="multiple-choise">1300</button>
+                    <button type="button" id="maths-2" onclick="selectAnswerMaths(this.id, this)" class="multiple-choise">1293</button>
+                    <button type="button" id="maths-3" onclick="selectAnswerMaths(this.id, this)" class="multiple-choise">1288</button>
+                </form>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Who wrote Romeo And Juliet?</h3>
+                <form>
+                    <input type="text" id="italian-1"></input>
+                    <button type="button" id="" onclick="selectAnswerItalian()" class="multiple-choise">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

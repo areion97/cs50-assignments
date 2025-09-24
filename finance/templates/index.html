@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <div>
+        <table>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row["stock_symbol"] }}</td>
+                <td>{{ row["shares_num"] }}</td>
+                <td>{{ row["current_price"] }}</td>
+                <td>{{ row["current_value"] }}</td>
+            </tr>
+            {% endfor %}
+
+            Total: {{ total }}
+        </table>
+    </div>
+{% endblock %}
